@@ -1,17 +1,19 @@
-def bubble_sort(nums : list[int]) -> list[int]:
-    n = len(nums)
+# def bubble_sort(nums : list[int]) -> list[int]:
+#     n = len(nums)
     
-    for i in range(n):
-        flag = False
-        for j in range(0,n-1-i) :
-            if nums[j] > nums[j+1] :
-                nums[j], nums[j+1] = nums[j+1], nums[j]
-                flag = True
+#     for i in range(n):
+#         flag = False
+#         for j in range(0,n-1-i) :
+#             if nums[j] > nums[j+1] :
+#                 nums[j], nums[j+1] = nums[j+1], nums[j]
+#                 flag = True
                 
-        if not flag :
-            break
+#         if not flag :
+#             break
                 
-    return nums
+#     return nums
+
+
 
 def selection_sort(nums : list[int]) -> list[int]:
     n = len(nums) 
