@@ -33,11 +33,11 @@ class selection_sort :
 
 arr = [8,3,2,6,12,1]
 
-a = bubble_sort()
-b = selection_sort()
+bubble = bubble_sort()
+selection = selection_sort()
 
-op1 = a.algo(arr)
-op2 = b.algo(arr)
+op1 = bubble.algo(arr)
+op2 = selection.algo(arr)
 
 print(op1)
 print(op2)
