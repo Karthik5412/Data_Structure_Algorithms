@@ -28,7 +28,7 @@ def selection_sort(nums : list[int]) -> list[int]:
                 
         if is_sorted :
             break
-        nums[i] = nums[idx]
+        nums[i],nums[idx] = nums[idx],nums[i]
         
     return nums
 
@@ -49,10 +49,12 @@ def insertion_sort(nums : list[int]) -> list[int]:
     return nums
 
 def main(): 
-    nums = [8,3,2,6,12,1]
-    bubble = bubble_sort(nums)
-    selection = selection_sort(nums)
-    insertion = insertion_sort(nums)
+    n1 = [8,3,2,6,12,1]
+    n2 = [8,3,2,6,12,1]
+    n3 = [8,3,2,6,12,1]
+    bubble = bubble_sort(n1)
+    selection = selection_sort(n2)
+    insertion = insertion_sort(n3)
     print('bubble    -->',bubble)
     print('selection -->', selection) 
     print('insertion -->', insertion) 
