@@ -22,11 +22,14 @@ class selection_sort :
         
         for i in range(n) :
             min_idx = i 
-            
+            flag = True
             for j in range(i,n):
                 if arr[min_idx] > arr[j] :
                     min_idx = i 
+                    flag = False
                     
+            if flag :
+                break
             arr[i] = arr[min_idx]
             
         return arr
