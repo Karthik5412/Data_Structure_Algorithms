@@ -41,7 +41,7 @@ def insertion_sort(nums : list[int]) -> list[int]:
         j = i-1
         
         while j>= 0 and nums[j] > pick :
-            nums[j+1] = j
+            nums[j+1] = nums[j]
             j-=1
             
         nums[j+1] = pick 
