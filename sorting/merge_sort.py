@@ -1,5 +1,9 @@
 class merge_sort :
-    pass
+    def merge(self,arr) :
+        pass 
+    
+    def algo(self,arr) :
+        pass
 
 class bubble_sort :
     def algo(self, arr : list[int]) -> list[int] :
