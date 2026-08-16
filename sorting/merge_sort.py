@@ -1,6 +1,19 @@
 class merge_sort :
     def merge(self,left,right) :
-        pass 
+        sorted_arr = []
+        i = j = 0
+        while i<len(left) and j < len(right) :
+            if left[i] < right[j] :
+                sorted_arr.append(left[i])
+                i+= 1
+            else :
+                sorted_arr.append(right[j])
+                j+= 1
+                
+        sorted_arr.extend(left[i:])
+        sorted_arr.extend(right[j:])
+        
+        return sorted_arr
     
     def algo(self,arr) :
         if len(arr) <= 1 :
@@ -67,11 +80,14 @@ arr = [8,3,2,6,12,1]
 bubble = bubble_sort()
 selection = selection_sort()
 insertion = insertion_sort()
+merge = merge_sort()
 
 op1 = bubble.algo(arr)
 op2 = selection.algo(arr)
 op3 = insertion.algo(arr)
+op4 = merge.algo(arr) 
 
 print(op1)
 print(op2)
 print(op3)
+print(op4)
