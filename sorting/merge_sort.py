@@ -1,9 +1,17 @@
 class merge_sort :
-    def merge(self,arr) :
+    def merge(self,left,right) :
         pass 
     
     def algo(self,arr) :
-        pass
+        if len(arr) <= 1 :
+            return arr 
+        
+        mid = len(arr)//2 
+        
+        left = self.algo(arr[:mid])
+        right = self.algo(arr[mid:])
+        
+        return self.merge(left,right)
 
 class bubble_sort :
     def algo(self, arr : list[int]) -> list[int] :
