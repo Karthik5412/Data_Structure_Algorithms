@@ -48,16 +48,48 @@ def insertion_sort(nums : list[int]) -> list[int]:
         
     return nums
 
+def merge_sort(nums : list[int]) -> list[int] :
+    if len(nums) <= 1 :
+        return nums 
+    
+    mid = len(nums)//2
+    
+    left = merge_sort(nums[:mid])
+    right = merge_sort(nums[mid:])
+    
+    return merge(left,right)
+
+def merge(left,right) :
+    arr = []
+    i = j = 0
+    
+    while i < len(left) and j < len(right) :
+        if left[i] < right[j] :
+            arr.append(left[i])
+            i+= 1
+        else :
+            arr.append(right[j])
+            j+= 1
+            
+    arr.extend(left[i:])
+    arr.extend(right[j:])
+    
+    return arr 
+
+
 def main(): 
     n1 = [8,3,2,6,12,1]
     n2 = [8,3,2,6,12,1]
     n3 = [8,3,2,6,12,1]
+    n4 = [8,3,2,6,12,1]
     bubble = bubble_sort(n1)
     selection = selection_sort(n2)
     insertion = insertion_sort(n3)
+    m1 = merge_sort(n4)
     print('bubble    -->',bubble)
     print('selection -->', selection) 
     print('insertion -->', insertion) 
+    print('merge     -->', m1) 
 
 if __name__ == '__main__' :
     main() 
