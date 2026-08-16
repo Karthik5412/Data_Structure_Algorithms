@@ -39,8 +39,8 @@ class bubble_sort :
                 break
                     
         return arr 
-    
-    
+
+
 class selection_sort :
     def algo(self, arr : list[int]) -> list[int] :
         n = len(arr)
