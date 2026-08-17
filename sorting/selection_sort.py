@@ -47,6 +47,8 @@ def insertion_sort(arr : list[int]) -> list[int] :
         
         return arr
 
+def merge_soort(arr : list[int]) -> list[int] :
+    pass
 
 nums = [8,3,2,9,6,12,1]
 
