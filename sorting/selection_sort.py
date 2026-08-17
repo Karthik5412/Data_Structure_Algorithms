@@ -50,6 +50,9 @@ def insertion_sort(arr : list[int]) -> list[int] :
 def merge_soort(arr : list[int]) -> list[int] :
     pass
 
+def merge(left, right) :
+    pass
+
 nums = [8,3,2,9,6,12,1]
 
 selection = selection_sort(nums)
