@@ -75,17 +75,20 @@ class insertion_sort :
             
         return arr 
 
-arr = [8,3,2,6,12,1]
+a1 = [8,3,2,6,12,1]
+a2 = [8,3,2,6,12,1]
+a3 = [8,3,2,6,12,1]
+a4 = [8,3,2,6,12,1]
 
 bubble = bubble_sort()
 selection = selection_sort()
 insertion = insertion_sort()
 merge = merge_sort()
 
-op1 = bubble.algo(arr)
-op2 = selection.algo(arr)
-op3 = insertion.algo(arr)
-op4 = merge.algo(arr) 
+op1 = bubble.algo(a1)
+op2 = selection.algo(a2)
+op3 = insertion.algo(a3)
+op4 = merge.algo(a4) 
 
 print(op1)
 print(op2)
