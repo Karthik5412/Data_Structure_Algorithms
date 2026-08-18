@@ -32,9 +32,9 @@ class Sorting_algos :
         
     def selection_sort(self, arr : list[int]) -> list[int] :
         l = len(arr) 
-        
+        flag = True
         for i in range(l) :
-            flag = True
+            
             min_idx = i
             for j in range(i+1,l) :
                 if arr[j] < arr[min_idx] :
@@ -42,7 +42,7 @@ class Sorting_algos :
                     flag = False 
             if flag :
                 break 
-            arr[i] = arr[min_idx]
+            arr[i],arr[min_idx] = arr[min_idx], arr[i]
             
         return arr
 
@@ -77,10 +77,13 @@ class Sorting_algos :
         
         
         
-nums = [8,3,2,9,6,12,1]
+n1 = [8,3,2,6,12,1]
+n2 = [8,3,2,6,12,1]
+n3 = [8,3,2,6,12,1]
+n4 = [8,3,2,6,12,1]
 s = Sorting_algos()
 
-print(s.insertion_sort(nums))
-print(s.bubble_sort(nums))
-print(s.selection_sort(nums))
-print(s.merge_sort(nums))
+print(s.insertion_sort(n1))
+print(s.bubble_sort(n2))
+print(s.selection_sort(n3))
+print(s.merge_sort(n4))
