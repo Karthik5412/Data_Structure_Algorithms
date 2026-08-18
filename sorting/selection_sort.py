@@ -40,12 +40,11 @@ def insertion_sort(arr : list[int]) -> list[int] :
         j = i-1
         
         while j >= 0 and arr[j] > pick :
-            if arr[j] > arr[j+1] :
-                arr[j+1],arr[j] = arr[j], arr[j+1]
+                arr[j+1] = arr[j]
                 j -= 1
         arr[j+1] = pick 
         
-        return arr
+    return arr
 
 def merge_sort(arr : list[int]) -> list[int] :
     if len(arr) <= 1 :
