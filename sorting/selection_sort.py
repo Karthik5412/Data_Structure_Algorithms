@@ -47,8 +47,16 @@ def insertion_sort(arr : list[int]) -> list[int] :
         
         return arr
 
-def merge_soort(arr : list[int]) -> list[int] :
-    pass
+def merge_sort(arr : list[int]) -> list[int] :
+    if len(arr) <= 1 :
+        return arr 
+    
+    mid = len(arr) // 2 
+    
+    left = merge_sort(arr[:mid])
+    right = merge_sort(arr[mid:])
+    
+    merge(left,right)
 
 def merge(left, right) :
     pass
