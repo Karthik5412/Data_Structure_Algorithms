@@ -55,7 +55,7 @@ def merge_sort(arr : list[int]) -> list[int] :
     left = merge_sort(arr[:mid])
     right = merge_sort(arr[mid:])
     
-    merge(left,right)
+    return merge(left,right)
 
 def merge(left, right) :
     i = j = 0
@@ -81,8 +81,10 @@ n4 = [8,3,2,9,6,12,1]
 selection = selection_sort(n1)
 bubble = bubble_sort(n2)
 insertion = insertion_sort(n3)
+mergeSort = merge_sort(n4)
 
 print(f'bubble sort    --> {bubble}')
 print(f'selection sort --> {selection}')
 print(f'insertion sort --> {insertion}')
+print(f'merge sort     --> {mergeSort}')
 
