@@ -28,8 +28,20 @@ def selection(arr) :
         
     return arr 
 
-def insretion() :
-    pass 
+def insretion(arr) :
+    n = len(arr) 
+    
+    for i in range(1,n) :
+        pick = arr[i]
+        j = i-1 
+        
+        while j >= 0 and arr[j] > pick :
+            arr[j+1] = arr[j]
+            j -= 1
+            
+        arr[j+1] = pick 
+        
+    return arr 
 
 def merge() :
     pass 
@@ -37,4 +49,4 @@ def merge() :
 arr = [8,3,2,6,12,1] 
 
 print(arr)
-print(selection(arr))
+print(insretion(arr))
