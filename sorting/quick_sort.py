@@ -43,10 +43,35 @@ def insretion(arr) :
         
     return arr 
 
-def merge() :
-    pass 
+def merge(arr) :
+    if len(arr) <= 1 :
+        return arr 
+    
+    mid = len(arr) // 2
+    
+    left = merge(arr[:mid])
+    right = merge(arr[mid:])
+    
+    return algo(left,right)
+
+def algo(left,right) :
+    i = j = 0 
+    res = []
+    
+    while i < len(left) and j < len(right) :
+        if left[i] < right[j] :
+            res.append(left[i])
+            i += 1
+            
+        else :
+            res.append(right[j])
+            j += 1
+    res.extend(left[i:])
+    res.extend(right[j:])
+    return res 
+    
 
 arr = [8,3,2,6,12,1] 
-
-print(arr)
-print(insretion(arr))
+res = merge(arr)
+print(arr) 
+print(res)
