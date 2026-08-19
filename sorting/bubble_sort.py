@@ -13,8 +13,6 @@ def bubble_sort(nums : list[int]) -> list[int]:
                 
     return nums
 
-
-
 def selection_sort(nums : list[int]) -> list[int]:
     n = len(nums) 
     is_sorted = True 
@@ -76,20 +74,33 @@ def merge(left,right) :
     
     return arr 
 
+def quick_sort(arr: list[int]) :
+    if len(arr) <= 1 :
+        return arr 
+    
+    pivot = arr[-1]
+    
+    left = [x for x in arr[:-1] if x <= pivot]
+    right = [x for x in arr[:-1] if x > pivot] 
+    
+    return quick_sort(left) + [pivot] + quick_sort(right)
 
 def main(): 
     n1 = [8,3,2,6,12,1]
     n2 = [8,3,2,6,12,1]
     n3 = [8,3,2,6,12,1]
     n4 = [8,3,2,6,12,1]
+    n5 = [8,3,2,6,12,1]
     bubble = bubble_sort(n1)
     selection = selection_sort(n2)
     insertion = insertion_sort(n3)
     m1 = merge_sort(n4)
+    quick = quick_sort(n5)
     print('bubble    -->',bubble)
     print('selection -->', selection) 
     print('insertion -->', insertion) 
     print('merge     -->', m1) 
+    print('quick     -->', quick) 
 
 if __name__ == '__main__' :
     main() 
