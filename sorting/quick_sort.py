@@ -81,7 +81,14 @@ def quick(arr) :
     
     return quick(left) + [pivot] + quick(right) 
 
-arr = [8,3,2,6,12,1] 
-res = quick(arr)
-print(arr) 
-print(res)
+a1 = [8,3,2,6,12,1] 
+a2 = [8,3,2,6,12,1] 
+a3 = [8,3,2,6,12,1] 
+a4 = [8,3,2,6,12,1] 
+a5 = [8,3,2,6,12,1] 
+
+print(f'Bubble Sort    -->{bubble(a1)}')
+print(f'Selection Sort -->{selection(a2)}')
+print(f'Insertion Sort -->{insretion(a3)}')
+print(f'Merge Sort     -->{merge(a4)}')
+print(f'Quick Sort     -->{quick(a5)}')
