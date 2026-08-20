@@ -3,6 +3,9 @@ class Node :
         self.data = data 
         self.next = None 
         
+
+
+
 class Linked_List :
     def __init__(self) :
         self.head = None 
@@ -23,7 +26,7 @@ class Linked_List :
                 
             current.next = new_node 
             self.size += 1
-            
+    
     def insert_at_front(self,data) :
         new_node = Node(data) 
         self.size += 1
@@ -52,6 +55,50 @@ class Linked_List :
             current.next = new_node 
             self.size += 1
     
+    def delete_node(self) :
+        if not self.head :
+            print('Linked List is empty')
+        elif not self.head.next :
+            self.head = None 
+            self.size -= 1
+            
+        else :
+            current = self.head 
+            
+            while current.next.next :
+                current = current.next 
+                
+            current.next = None 
+            self.size -= 1
+    
+    def delete_head_node(self) :
+        if not self.head :
+            print("No Head Node")
+        else :
+            self.head = self.head.next 
+            self.size -= 1
+    
+    def delete_this_node(self,data) :
+        if not self.head :
+            print('This is an empty list')
+        else :
+            if self.head.data == data :
+                self.head = self.head.next 
+                self.size -= 1 
+                
+            else :
+                prev = self.head 
+                current = self.head.next
+                while current.next :
+                    if current.data == data :
+                        prev.next = current.next 
+                        self.size -= 1
+                        break 
+                    else :
+                        prev = prev.next
+                        current = current.next 
+    
+    
     def display(self) :
         if not self.head :
             print('Noting')
@@ -67,17 +114,32 @@ l1 = Linked_List()
 
 l1.display()
 print(l1.size)
+l1.delete_node()
 l1.insert_at_middle(10)
 l1.insertion(20)
+l1.delete_node()
 l1.insertion(30)
 print(l1.size)
+l1.display()
 l1.insert_at_front(40)
+l1.display()
+l1.delete_node()
 l1.insertion(50)
 l1.insertion(60)
 l1.insertion(70)
 l1.insert_at_middle(80)
 l1.insert_at_middle(90)
 l1.insert_at_middle(100)
+l1.delete_node()
 print(l1.size)
 l1.display()
-        
+l1.delete_head_node()
+l1.delete_head_node()
+print(l1.size)
+l1.display()
+l1.delete_this_node(100) 
+l1.display()
+print(l1.size)
+l1.delete_this_node(80)
+l1.display()
+print(l1.size)
