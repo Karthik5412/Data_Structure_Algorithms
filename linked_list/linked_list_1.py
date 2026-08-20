@@ -55,6 +55,33 @@ class Linked_List :
             current.next = new_node 
             self.size += 1
     
+    def insert_at_index(self,data,idx) :
+        new_node = Node(data )
+        
+        
+        if idx == 0 or not self.head :
+            new_node.next = self.head 
+            self.head = new_node
+            self.size += 1
+        else :
+            prev = self.head 
+            current = self.head.next 
+            
+            if idx > self.size :
+                self.insertion(data) 
+                return 
+            pointer = idx-1
+            
+            while current :
+                if pointer == 0 :
+                    prev.next = new_node
+                    new_node.next = current
+                    break 
+                prev = prev.next 
+                current = current.next 
+                pointer -= 1
+            
+            self.size += 1
     def delete_node(self) :
         if not self.head :
             print('Linked List is empty')
@@ -141,5 +168,14 @@ l1.delete_this_node(100)
 l1.display()
 print(l1.size)
 l1.delete_this_node(80)
+l1.display()
+print(l1.size)
+l1.insert_at_index(120,100)
+l1.display()
+print(l1.size)
+l1.insert_at_index(100,2)
+l1.display()
+print(l1.size)
+l1.insert_at_index(10,0)
 l1.display()
 print(l1.size)
