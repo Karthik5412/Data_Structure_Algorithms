@@ -75,15 +75,26 @@ class Sorting_algos :
         
         return res 
         
+    def quick_sort(self, arr: list[int]) -> list[int] : 
+        if len(arr) <= 1 :
+            return arr 
         
+        pivot= arr[-1]
+        
+        left = [x for x in arr[:-1] if x <= pivot]
+        right = [x for x in arr[:-1] if x > pivot]
+        
+        return self.quick_sort(left) + [pivot] + self.quick_sort(right)
         
 n1 = [8,3,2,6,12,1]
 n2 = [8,3,2,6,12,1]
 n3 = [8,3,2,6,12,1]
 n4 = [8,3,2,6,12,1]
+n5 = [8,3,2,6,12,1]
 s = Sorting_algos()
 
 print(s.insertion_sort(n1))
 print(s.bubble_sort(n2))
 print(s.selection_sort(n3))
 print(s.merge_sort(n4))
+print(s.quick_sort(n5))
