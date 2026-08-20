@@ -73,18 +73,32 @@ def merge(left, right) :
     
     return ans 
 
+def quick_sort(arr) :
+    if len(arr) <= 1 :
+        return arr 
+    
+    pivot = arr[-1]
+    
+    left = [i for i in arr[:-1] if i <= pivot]
+    right = [i for i in arr[:-1] if i > pivot]
+    
+    return quick_sort(left) + [pivot] + quick_sort(right)
+
 n1 = [8,3,2,9,6,12,1]
 n2 = [8,3,2,9,6,12,1]
 n3 = [8,3,2,9,6,12,1]
 n4 = [8,3,2,9,6,12,1]
+n5 = [8,3,2,9,6,12,1]
 
 selection = selection_sort(n1)
 bubble = bubble_sort(n2)
 insertion = insertion_sort(n3)
 mergeSort = merge_sort(n4)
+quick = quick_sort(n5)
 
 print(f'bubble sort    --> {bubble}')
 print(f'selection sort --> {selection}')
 print(f'insertion sort --> {insertion}')
 print(f'merge sort     --> {mergeSort}')
+print(f'quick sort     --> {quick}')
 
