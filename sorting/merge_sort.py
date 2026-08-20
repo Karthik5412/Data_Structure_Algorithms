@@ -75,22 +75,40 @@ class insertion_sort :
             
         return arr 
 
+
+class quick_sort :
+    def algo(self, arr : list[int]) -> list[int]: 
+        if len(arr) <= 1 :
+            return arr 
+        
+        pivot = arr[-1]
+        
+        left = [x for x in arr[:-1] if x <= pivot]
+        right = [x for x in arr[:-1] if x > pivot]
+        
+        return self.algo(left) + [pivot] + self.algo(right)
+        
+        
 a1 = [8,3,2,6,12,1]
 a2 = [8,3,2,6,12,1]
 a3 = [8,3,2,6,12,1]
 a4 = [8,3,2,6,12,1]
+a5 = [8,3,2,6,12,1]
 
 bubble = bubble_sort()
 selection = selection_sort()
 insertion = insertion_sort()
 merge = merge_sort()
+quick = quick_sort()
 
 op1 = bubble.algo(a1)
 op2 = selection.algo(a2)
 op3 = insertion.algo(a3)
 op4 = merge.algo(a4) 
+op5 = quick.algo(a5)
 
 print(op1)
 print(op2)
 print(op3)
-print(op4)
+print(op4) 
+print(op5) 
