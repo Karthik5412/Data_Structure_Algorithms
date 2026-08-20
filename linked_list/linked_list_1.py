@@ -82,6 +82,7 @@ class Linked_List :
                 pointer -= 1
             
             self.size += 1
+    
     def delete_node(self) :
         if not self.head :
             print('Linked List is empty')
