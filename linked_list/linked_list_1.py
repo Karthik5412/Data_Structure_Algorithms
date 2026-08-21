@@ -126,6 +126,25 @@ class Linked_List :
                         prev = prev.next
                         current = current.next 
     
+    def reverse_the_list(self) :
+        if not self.head or not self.head.next :
+            if self.head :
+                print(self.head.data ) 
+            else :
+                print("None")
+        else :
+            curr = self.head 
+            prev = None 
+            
+            while curr :
+                next_node = curr.next 
+                curr.next = prev 
+                prev = curr 
+                curr = next_node 
+            
+            self.head = prev
+            
+            self.display()
     
     def display(self) :
         if not self.head :
@@ -139,11 +158,12 @@ class Linked_List :
             print(current.data)
         
 l1 = Linked_List()
-
+l1.reverse_the_list()
 l1.display()
 print(l1.size)
 l1.delete_node()
 l1.insert_at_middle(10)
+l1.reverse_the_list()
 l1.insertion(20)
 l1.delete_node()
 l1.insertion(30)
@@ -180,3 +200,5 @@ print(l1.size)
 l1.insert_at_index(10,0)
 l1.display()
 print(l1.size)
+l1.reverse_the_list()
+l1.display()
