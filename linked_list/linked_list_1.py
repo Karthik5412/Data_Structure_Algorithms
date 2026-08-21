@@ -202,3 +202,7 @@ l1.display()
 print(l1.size)
 l1.reverse_the_list()
 l1.display()
+
+
+
+#just for streak 
