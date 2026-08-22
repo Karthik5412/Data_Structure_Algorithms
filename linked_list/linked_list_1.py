@@ -165,7 +165,7 @@ class Linked_List :
         curr = self.head 
         while curr :
             arr.append(curr.data) 
-            
+            curr = curr.next 
         op = self.quick(arr)
         
         head = Node(op[0])
@@ -173,7 +173,7 @@ class Linked_List :
         
         for i in op[1:] :
             curr.next = Node(i)
-            
+            curr = curr.next 
         self.head = head 
         
         
@@ -245,5 +245,6 @@ l1.reverse_the_list()
 l1.display()
 l1.search(100)
 
-
+l1.sort_the_list()
+l1.display()
 
