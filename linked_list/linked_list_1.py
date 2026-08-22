@@ -160,6 +160,24 @@ class Linked_List :
             print(f'Unknown Value')
             return 
     
+    def sort_the_list(self) :
+        arr = []
+        curr = self.head 
+        while curr :
+            arr.append(curr.data) 
+            
+        self.quick(arr)
+        
+    def quick(self, arr) :
+        if len(arr) <= 1 :
+            return arr 
+        
+        pivot = arr[-1]
+        left = [x for x in arr[:-1] if x <= pivot]
+        right = [x for x in arr[:-1] if x > pivot] 
+        
+        return self.quick(left) + [pivot] + self.quick(right)
+    
     def display(self) :
         if not self.head :
             print('Noting')
@@ -217,5 +235,6 @@ print(l1.size)
 l1.reverse_the_list()
 l1.display()
 l1.search(100)
+
 
 
