@@ -161,6 +161,9 @@ class Linked_List :
             return 
     
     def sort_the_list(self) :
+        if not self.head or self.head.next :
+            return 
+        
         arr = []
         curr = self.head 
         while curr :
@@ -175,8 +178,7 @@ class Linked_List :
             curr.next = Node(i)
             curr = curr.next 
         self.head = head 
-        
-        
+    
     def quick(self, arr) :
         if len(arr) <= 1 :
             return arr 
