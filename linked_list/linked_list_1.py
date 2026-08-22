@@ -166,7 +166,16 @@ class Linked_List :
         while curr :
             arr.append(curr.data) 
             
-        self.quick(arr)
+        op = self.quick(arr)
+        
+        head = Node(op[0])
+        curr = head 
+        
+        for i in op[1:] :
+            curr.next = Node(i)
+            
+        self.head = head 
+        
         
     def quick(self, arr) :
         if len(arr) <= 1 :
