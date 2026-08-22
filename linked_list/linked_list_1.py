@@ -146,6 +146,22 @@ class Linked_List :
             
             self.display()
     
+    def search(self, data) :
+        
+        curr = self.head 
+        count = 0
+        
+        while curr :
+            if curr.data == data :
+                print(f'Value found in the index of {count}')
+                return 
+            else :
+                curr = curr.next 
+                count += 1
+        else :
+            print(f'Unknown Value')
+            return 
+    
     def display(self) :
         if not self.head :
             print('Noting')
@@ -202,7 +218,6 @@ l1.display()
 print(l1.size)
 l1.reverse_the_list()
 l1.display()
+l1.search(100)
 
 
-
-#just for streak 
