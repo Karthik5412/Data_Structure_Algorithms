@@ -49,6 +49,7 @@ class Circular_Linked_List :
             
             if not self.head :
                 self.head =new_node
+                self.head.next = self.head
                 self.size += 1
             else :
                 current = self.head 
@@ -60,6 +61,41 @@ class Circular_Linked_List :
                 
                 new_node.next = current.next
                 current.next = new_node 
+                self.size += 1
+    
+    def insert_at_index(self,data,idx) :
+            new_node = Node(data )
+            
+            
+            if idx == 0 or not self.head :
+                new_node.next = self.head 
+                
+                curr = self.head 
+                while curr.next != self.head :
+                    curr = curr.next
+                
+                self.head = new_node
+                curr.next = self.head
+                
+                self.size += 1
+            else :
+                prev = self.head 
+                current = self.head.next 
+                
+                if idx >= self.size :
+                    self.insertion(data) 
+                    return 
+                pointer = idx-1
+                
+                while current.next != self.head  :
+                    if pointer == 0 :
+                        prev.next = new_node
+                        new_node.next = current
+                        break 
+                    prev = prev.next 
+                    current = current.next 
+                    pointer -= 1
+                
                 self.size += 1
     
     def display(self) :
@@ -90,6 +126,9 @@ cl.insert_at_front(80)
 
 cl.insert_at_middle(500)
 cl.insert_at_middle(250)
+
+cl.insert_at_index(300,5)
+cl.insert_at_index(300,25)
 
 cl.display()
 print(cl.size)
