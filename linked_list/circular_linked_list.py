@@ -44,6 +44,24 @@ class Circular_Linked_List :
                 curr.next = new_node 
                 self.head = new_node 
     
+    def insert_at_middle(self,data) :
+            new_node = Node(data)
+            
+            if not self.head :
+                self.head =new_node
+                self.size += 1
+            else :
+                current = self.head 
+                place = (self.size // 2) -1
+                
+                while place > 0 :
+                    current = current.next 
+                    place -= 1
+                
+                new_node.next = current.next
+                current.next = new_node 
+                self.size += 1
+    
     def display(self) :
             if not self.head :
                 print('Noting')
@@ -70,4 +88,8 @@ cl.insertion(60)
 cl.insertion(70)
 cl.insert_at_front(80)
 
+cl.insert_at_middle(500)
+cl.insert_at_middle(250)
+
 cl.display()
+print(cl.size)
