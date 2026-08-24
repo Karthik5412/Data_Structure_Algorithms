@@ -175,6 +175,22 @@ class Circular_Linked_List :
                 
                 self.display()
     
+    def search(self, data) :
+            
+            curr = self.head 
+            count = 0
+            
+            while curr.next != self.head :
+                if curr.data == data :
+                    print(f'Value found in the index of {count}')
+                    return 
+                else :
+                    curr = curr.next 
+                    count += 1
+            else :
+                print(f'Unknown Value')
+                return 
+    
     def display(self) :
             if not self.head :
                 print('Noting')
@@ -215,6 +231,9 @@ cl.insert_at_front(80)
 
 cl.insert_at_middle(500)
 cl.insert_at_middle(250)
+
+cl.search(500)
+cl.display()
 
 cl.insert_at_index(300,5)
 cl.insert_at_index(300,25)
