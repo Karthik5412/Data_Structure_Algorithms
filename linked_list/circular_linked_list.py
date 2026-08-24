@@ -108,10 +108,10 @@ class Circular_Linked_List :
             else :
                 current = self.head 
                 
-                while current.next.next == self.head:
+                while current.next.next != self.head:
                     current = current.next 
                     
-                current.next = None 
+                current.next = self.head 
                 self.size -= 1
     
     def display(self) :
@@ -129,7 +129,12 @@ class Circular_Linked_List :
             
 cl = Circular_Linked_List()
 
+cl.delete_node()
 cl.insertion(10)
+cl.delete_node()
+
+cl.display()
+
 cl.insertion(20)
 cl.insertion(30)
 cl.insertion(40)
@@ -146,6 +151,10 @@ cl.insert_at_middle(250)
 
 cl.insert_at_index(300,5)
 cl.insert_at_index(300,25)
+
+cl.delete_node()
+cl.delete_node()
+cl.delete_node()
 
 cl.display()
 print(cl.size)
