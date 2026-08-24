@@ -98,6 +98,22 @@ class Circular_Linked_List :
                 
                 self.size += 1
     
+    def delete_node(self) :
+            if not self.head :
+                print('Linked List is empty')
+            elif self.head.next == self.head :
+                self.head = None 
+                self.size -= 1
+                
+            else :
+                current = self.head 
+                
+                while current.next.next == self.head:
+                    current = current.next 
+                    
+                current.next = None 
+                self.size -= 1
+    
     def display(self) :
             if not self.head :
                 print('Noting')
@@ -107,7 +123,8 @@ class Circular_Linked_List :
                 while current.next != self.head :
                     print(f'{current.data} ->',end=' ')
                     current = current.next 
-                print(current.data)
+                print(current.data,' <->', end=' ')
+                print(current.next.data)
             
             
 cl = Circular_Linked_List()
