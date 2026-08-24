@@ -191,6 +191,36 @@ class Circular_Linked_List :
                 print(f'Unknown Value')
                 return 
     
+    def sort_the_list(self) :
+            if not self.head or self.head.next == self.head :
+                return 
+            
+            arr = []
+            curr = self.head 
+            while curr.next != self.head:
+                arr.append(curr.data) 
+                curr = curr.next 
+            op = self.quick(arr)
+            
+            head = Node(op[0])
+            curr = head 
+            
+            for i in op[1:] :
+                curr.next = Node(i)
+                curr = curr.next
+            self.head = head 
+            curr.next = self.head
+    
+    def quick(self, arr) :
+            if len(arr) <= 1 :
+                return arr 
+            
+            pivot = arr[-1]
+            left = [x for x in arr[:-1] if x <= pivot]
+            right = [x for x in arr[:-1] if x > pivot] 
+            
+            return self.quick(left) + [pivot] + self.quick(right)
+    
     def display(self) :
             if not self.head :
                 print('Noting')
@@ -248,6 +278,8 @@ cl.delete_this_node(500)
 cl.display()
 
 cl.reverse_the_list()
+
+cl.sort_the_list()
 
 cl.display()
 print(cl.size)
