@@ -114,6 +114,18 @@ class Circular_Linked_List :
                 current.next = self.head 
                 self.size -= 1
     
+    def delete_head_node(self) :
+            if not self.head :
+                print("No Head Node")
+            else :
+                curr = self.head 
+                while curr.next != self.head :
+                    curr = curr.next 
+                    
+                curr.next = self.head.next 
+                self.head = self.head.next 
+                self.size -= 1
+    
     def display(self) :
             if not self.head :
                 print('Noting')
@@ -154,7 +166,10 @@ cl.insert_at_index(300,25)
 
 cl.delete_node()
 cl.delete_node()
-cl.delete_node()
+
+cl.display()
+
+cl.delete_head_node()
 
 cl.display()
 print(cl.size)
