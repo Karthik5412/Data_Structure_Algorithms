@@ -153,6 +153,28 @@ class Circular_Linked_List :
                             prev = prev.next
                             current = current.next 
     
+    def reverse_the_list(self) :
+            if not self.head or self.head.next  == self.head:
+                if self.head :
+                    print(self.head.data ) 
+                else :
+                    print("None")
+            else :
+                curr = self.head 
+                prev = None 
+                
+                while curr.next != self.head :
+                    next_node = curr.next 
+                    curr.next = prev 
+                    prev = curr 
+                    curr = next_node 
+                
+                curr.next = prev
+                self.head.next = curr
+                self.head = curr
+                
+                self.display()
+    
     def display(self) :
             if not self.head :
                 print('Noting')
@@ -169,7 +191,13 @@ class Circular_Linked_List :
 cl = Circular_Linked_List()
 
 cl.delete_node()
+
+cl.reverse_the_list()
+
 cl.insertion(10)
+
+cl.reverse_the_list()
+
 cl.delete_node()
 
 cl.display()
@@ -198,7 +226,9 @@ cl.display()
 
 cl.delete_this_node(500)
 
+cl.display()
 
+cl.reverse_the_list()
 
 cl.display()
 print(cl.size)
