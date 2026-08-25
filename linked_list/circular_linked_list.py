@@ -126,6 +126,20 @@ class Circular_Linked_List :
                 self.head = self.head.next 
                 self.size -= 1
     
+    def delete_index(self,idx : int) :
+        if idx == 0 :
+            self.delete_head_node()
+            return 
+        
+        if idx >= self.size :
+            return 
+        
+        curr = self.head 
+        for _ in range(idx-1) :
+            curr = curr.next 
+            
+        curr.next = curr.next.next
+    
     def delete_this_node(self,data) :
             if not self.head :
                 print('This is an empty list')
@@ -283,3 +297,18 @@ cl.sort_the_list()
 
 cl.display()
 print(cl.size)
+
+
+c2 = Circular_Linked_List()
+
+c2.insertion(100)
+c2.insertion(30)
+c2.insertion(40)
+c2.insertion(50)
+c2.insertion(20)
+
+print('-'*80)
+
+c2.display()
+c2.delete_index(16)
+c2.display()
