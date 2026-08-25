@@ -108,13 +108,13 @@ class Linked_List :
         if idx == 0 :
             self.head = self.head.next 
         else :
-            if self.size < idx :
+            if self.size <= idx :
                 return 
             else :
                 curr = self.head 
                 for _ in range(idx-1) :
                     curr = curr.next
-                    
+                
                 curr.next = curr.next.next 
     
     def delete_this_node(self,data) :
@@ -269,6 +269,8 @@ l1.sort_the_list()
 
 l1.display()
 
+print('-'*75)
+
 l2 = Linked_List()
 l2.insertion(100)
 l2.insertion(30)
@@ -277,5 +279,9 @@ l2.insertion(50)
 l2.insertion(20)
 
 l2.sort_the_list()
+
+l2.display()
+
+l2.delete_index(100)
 
 l2.display()
