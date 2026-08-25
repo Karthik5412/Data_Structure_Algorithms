@@ -104,6 +104,19 @@ class Linked_List :
             self.head = self.head.next 
             self.size -= 1
     
+    def delete_index(self, idx : int) :
+        if idx == 0 :
+            self.head = self.head.next 
+        else :
+            if self.size < idx :
+                return 
+            else :
+                curr = self.head 
+                for _ in range(idx-1) :
+                    curr = curr.next
+                    
+                curr.next = curr.next.next 
+    
     def delete_this_node(self,data) :
         if not self.head :
             print('This is an empty list')
