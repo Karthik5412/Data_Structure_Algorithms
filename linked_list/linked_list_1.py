@@ -174,7 +174,7 @@ class Linked_List :
             return 
     
     def sort_the_list(self) :
-        if not self.head or self.head.next :
+        if not self.head or not self.head.next :
             return 
         
         arr = []
@@ -184,13 +184,13 @@ class Linked_List :
             curr = curr.next 
         op = self.quick(arr)
         
-        head = Node(op[0])
-        curr = head 
         
-        for i in op[1:] :
-            curr.next = Node(i)
+        curr = self.head 
+        
+        for i in op :
+            curr.data = i
             curr = curr.next 
-        self.head = head 
+        
     
     def quick(self, arr) :
         if len(arr) <= 1 :
@@ -240,6 +240,10 @@ l1.display()
 l1.delete_head_node()
 l1.delete_head_node()
 print(l1.size)
+
+l1.sort_the_list()
+l1.display()
+
 l1.display()
 l1.delete_this_node(100) 
 l1.display()
@@ -261,5 +265,17 @@ l1.display()
 l1.search(100)
 
 l1.sort_the_list()
+
+
 l1.display()
 
+l2 = Linked_List()
+l2.insertion(100)
+l2.insertion(30)
+l2.insertion(40)
+l2.insertion(50)
+l2.insertion(20)
+
+l2.sort_the_list()
+
+l2.display()
