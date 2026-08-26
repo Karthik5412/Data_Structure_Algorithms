@@ -4,7 +4,9 @@ class Stack :
         
     def push(self,ele) :
         self.stack.append(ele)
+        print(f'{ele} is added to stack')
         
+    
     
     
 stack = Stack()
