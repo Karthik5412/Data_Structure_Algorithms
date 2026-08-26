@@ -8,13 +8,20 @@ class Stack :
         
     
     def peak(self) :
-        if not self.is_empty :
+        if not self.is_empty() :
             print(f"peak element is {self.stack[-1]}")
         else :
             print('stack is empty')
     
     def is_empty(self) :
         return len(self.stack) == 0
+    
+    def pop(self) :
+        if not self.is_empty() :
+            ele = self.stack.pop()
+            print(f'{ele} removed from the stack')
+        else :
+            print('stack is empty')
     
 stack = Stack()
 
@@ -34,3 +41,29 @@ stack.peak()
 stack.push(50)
 
 stack.peak()
+
+print('-'*80)
+stack.pop()
+stack.peak()
+print()
+stack.pop()
+stack.peak()
+print()
+stack.pop()
+stack.peak()
+print()
+stack.pop()
+stack.peak()
+print()
+stack.pop()
+stack.peak()
+print()
+stack.pop()
+stack.peak()
+print()
+stack.pop()
+stack.peak()
+print()
+stack.pop()
+stack.peak()
+print()
