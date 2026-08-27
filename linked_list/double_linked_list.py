@@ -27,7 +27,18 @@ class DoubleLinkedList :
             new_node.prev = curr
             self.tail = new_node
             self.size += 1
+    
+    def insert_at_front(self,val)  :
+        new_node = Node(val)
+        
+        if not self.head :
+            self.head = self.tail = new_node 
+        else :
+            new_node.next = self.head 
+            self.head = new_node
             
+        self.size += 1
+    
     def display(self,reverse = False) :
         
         if not self.head :
@@ -55,6 +66,11 @@ class DoubleLinkedList :
 
 
 dl = DoubleLinkedList()
+
+
+dl.insert_at_front(100)
+print(dl.tail.val)
+print(dl.head.val)
 
 dl.insertion(10)
 dl.insertion(20)
