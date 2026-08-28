@@ -40,8 +40,24 @@ class DoubleLinkedList :
         self.size += 1
     
     def insert_at_middle(self,val) :
-        pass
-    
+        new_node = Node(val)
+        
+        idx = self.size // 2
+        
+        curr = self.head
+        
+        while curr :
+            if idx == 0 :
+                break 
+            curr = curr.next 
+            idx -= 1
+        
+        new_node.next = curr.next 
+        curr.next = new_node 
+        new_node.prev = curr 
+        
+        new_node.next.prev = new_node
+        
     def display(self,reverse = False) :
         
         if not self.head :
