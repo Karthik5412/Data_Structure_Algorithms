@@ -39,6 +39,9 @@ class DoubleLinkedList :
             
         self.size += 1
     
+    def insert_at_middle(self,val) :
+        pass
+    
     def display(self,reverse = False) :
         
         if not self.head :
