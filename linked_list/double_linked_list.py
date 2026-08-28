@@ -98,3 +98,10 @@ dl.insertion(40)
 print(dl.tail.val)
 
 dl.display(reverse=True)
+
+
+dl.insert_at_middle(5000)
+dl.insert_at_middle(100)
+dl.insert_at_middle(120)
+
+dl.display()
