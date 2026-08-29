@@ -59,7 +59,12 @@ class DoubleLinkedList :
         new_node.next.prev = new_node
     
     def delete_node(self) :
-        pass
+        if not self.head :
+            print('Empty')
+        else :
+            self.tail = self.tail.prev
+            self.tail.next = None
+            self.size -=1
     
     def display(self,reverse = False) :
         
