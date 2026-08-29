@@ -62,6 +62,11 @@ class DoubleLinkedList :
         if not self.head :
             print('Empty')
         else :
+            if self.size == 1 :
+                self.head = None 
+                self.tail = None 
+                return
+            
             self.tail = self.tail.prev
             self.tail.next = None
             self.size -=1
@@ -94,10 +99,14 @@ class DoubleLinkedList :
 
 dl = DoubleLinkedList()
 
+dl.delete_node()
 
 dl.insert_at_front(100)
 print(dl.tail.val)
 print(dl.head.val)
+
+dl.delete_node()
+dl.display()
 
 dl.insertion(10)
 dl.insertion(20)
@@ -111,5 +120,8 @@ dl.display(reverse=True)
 dl.insert_at_middle(5000)
 dl.insert_at_middle(100)
 dl.insert_at_middle(120)
+
+dl.display()
+dl.delete_node()
 
 dl.display()
