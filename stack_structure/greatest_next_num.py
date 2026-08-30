@@ -13,6 +13,7 @@ def next_great_num(arr) :
 
 arr = [4, 5, 2, 25, 7, 8, 1, 20, 11, 3, 12, 6]
 
+arr = [5,2,13,3,8]
 print(next_great_num(arr))
 
 print([5, 25, 25, -1, 8, 20, 20, -1, 12, 12, -1, -1])
