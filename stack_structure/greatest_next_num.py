@@ -8,3 +8,6 @@ def next_great_num(arr) :
         res[idx] = num
         
         stack.append(num)
+        
+    return res 
+
