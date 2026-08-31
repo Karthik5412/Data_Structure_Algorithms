@@ -132,13 +132,19 @@ print(dl.tail.val)
 
 dl.display(reverse=True)
 
+dl.display()
 
 dl.insert_at_middle(5000)
 
 dl.display()
 
 dl.insert_at_middle(100)
+
+dl.display()
+
 dl.insert_at_middle(120)
+
+dl.display()
 
 dl.display()
 dl.delete_node()
