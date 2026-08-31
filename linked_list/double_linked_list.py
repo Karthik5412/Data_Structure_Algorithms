@@ -71,6 +71,9 @@ class DoubleLinkedList :
             self.tail.next = None
             self.size -=1
     
+    def delete_head(self) :
+        pass
+    
     def display(self,reverse = False) :
         
         if not self.head :
