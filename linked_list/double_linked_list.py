@@ -47,7 +47,7 @@ class DoubleLinkedList :
         curr = self.head
         
         while curr :
-            if idx == 0 :
+            if idx == 1 :
                 break 
             curr = curr.next 
             idx -= 1
@@ -120,6 +120,11 @@ dl.delete_node()
 dl.display()
 
 dl.insertion(10)
+
+dl.delete_head()
+
+dl.display()
+
 dl.insertion(20)
 dl.insertion(30)
 dl.insertion(40)
@@ -129,10 +134,17 @@ dl.display(reverse=True)
 
 
 dl.insert_at_middle(5000)
+
+dl.display()
+
 dl.insert_at_middle(100)
 dl.insert_at_middle(120)
 
 dl.display()
 dl.delete_node()
 
+dl.display()
+
+
+dl.delete_head()
 dl.display()
