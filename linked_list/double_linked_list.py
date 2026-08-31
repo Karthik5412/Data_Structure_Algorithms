@@ -72,7 +72,15 @@ class DoubleLinkedList :
             self.size -=1
     
     def delete_head(self) :
-        pass
+        if not self.head :
+            return 
+        if self.head == self.tail :
+            self.head = None 
+            self.tail = None 
+            
+        else :
+            self.head = self.head.next 
+            self.head.prev = None
     
     def display(self,reverse = False) :
         
