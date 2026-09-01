@@ -7,3 +7,6 @@ class queue :
     
     def dequeue(self) :
             pass 
+        
+    def peak(self) :
+        pass
