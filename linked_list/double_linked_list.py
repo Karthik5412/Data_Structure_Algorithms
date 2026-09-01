@@ -154,3 +154,5 @@ dl.display()
 
 dl.delete_head()
 dl.display()
+
+dl.display()
