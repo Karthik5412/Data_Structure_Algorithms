@@ -4,3 +4,6 @@ class queue :
     
     def enqueue(self, val) :
         pass 
+    
+    def dequeue(self) :
+            pass 
