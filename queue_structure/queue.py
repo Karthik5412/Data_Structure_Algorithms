@@ -10,3 +10,6 @@ class queue :
         
     def peak(self) :
         pass
+    
+    
+que = queue()
