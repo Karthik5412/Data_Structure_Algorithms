@@ -12,4 +12,4 @@ class Queue :
         pass
     
     
-que = queue()
+que = Queue()
