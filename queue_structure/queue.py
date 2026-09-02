@@ -3,7 +3,7 @@ class Queue :
         self.queue = []
     
     def enqueue(self, val) :
-        pass 
+        self.queue.append(val)
     
     def dequeue(self) :
             pass 
