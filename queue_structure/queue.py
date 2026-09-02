@@ -6,7 +6,7 @@ class Queue :
         self.queue.append(val)
     
     def dequeue(self) :
-            pass 
+            self.queue.pop(0)
         
     def peak(self) :
         pass
