@@ -1,6 +1,6 @@
-class queue :
+class Queue :
     def __init__(self) :
-        pass 
+        self.queue = []
     
     def enqueue(self, val) :
         pass 
