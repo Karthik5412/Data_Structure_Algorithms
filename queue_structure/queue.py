@@ -9,7 +9,7 @@ class Queue :
             self.queue.pop(0)
         
     def peak(self) :
-        pass
+        return self.queue[0]
     
     
 que = Queue()
