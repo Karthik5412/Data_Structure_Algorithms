@@ -4,12 +4,16 @@ class Queue :
     
     def enque(self, val) :
         self.queue.append(val)
+        
+        print(f"{val} added to queue")
     
     def deque(self) :
-            self.queue.pop(0)
+            val = self.queue.pop(0)
+        
+            print(f'{val} deleted from queue')
         
     def peak(self) :
-        print(self.queue[0])
+        print(f'{self.queue[0]} is peak value')
     
     
 que = Queue()
