@@ -13,3 +13,10 @@ class Queue :
     
     
 que = Queue()
+
+
+que.enque(10)
+que.enque(20)
+que.enque(30)
+que.enque(40)
+que.enque(50)
