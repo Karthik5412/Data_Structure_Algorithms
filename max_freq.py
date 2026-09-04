@@ -15,3 +15,14 @@ class FreqStack:
         self.grp[freq].append(val)
 
         self.maxFreq = max(freq, self.maxFreq)
+
+
+    def pop(self) -> int:
+        val = self.grp[self.maxFreq].pop()
+
+        self.count[val] -= 1
+
+        if  not  self.grp[self.maxFreq] :
+            self.maxFreq -= 1
+
+        return val
