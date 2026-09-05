@@ -46,9 +46,13 @@ print('-'*80)
 stack.pop()
 stack.peak()
 print()
+
+
 stack.pop()
 stack.peak()
 print()
+
+
 stack.pop()
 stack.peak()
 print()
