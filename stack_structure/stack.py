@@ -61,9 +61,11 @@ print()
 stack.pop()
 stack.peak()
 print()
+
 stack.pop()
 stack.peak()
 print()
+
 stack.pop()
 stack.peak()
 print()
