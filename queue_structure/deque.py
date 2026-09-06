@@ -1,13 +1,13 @@
-class Queue :
+class Deque :
     def __init__(self) :
         self.queue = []
     
-    def enque(self, val) :
+    def enqueqe(self, val) :
         self.queue.append(val)
         
         print(f"{val} added to queue")
     
-    def deque(self) :
+    def dequeqe(self) :
             val = self.queue.pop(0)
         
             print(f'{val} deleted from queue')
