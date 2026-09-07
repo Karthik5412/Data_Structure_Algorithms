@@ -13,7 +13,7 @@ class Deque :
             print(f'{val} deleted from queue')
     
     def pop(self) :
-        pass 
+        print(f'{self.queue.pop()} deleted from queue')
     
     def pushleft(self) :
         pass 
