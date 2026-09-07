@@ -23,4 +23,10 @@ class Deque :
     
     def peak(self) :
         print(f'{self.queue[0]} is peak value')
+        
+        
+    def display(self) :
+        print(f'Queue -> {self.queue}')
+        
+        
     
