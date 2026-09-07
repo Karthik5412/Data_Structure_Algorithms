@@ -15,8 +15,10 @@ class Deque :
     def pop(self) :
         print(f'{self.queue.pop()} deleted from queue')
     
-    def pushleft(self) :
-        pass 
+    def pushleft(self,val) :
+        self.queue = [val] + self.queue
+        
+        print(f'{val} added to queue')
     
     
     def peak(self) :
