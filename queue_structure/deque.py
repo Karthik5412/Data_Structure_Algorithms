@@ -2,16 +2,23 @@ class Deque :
     def __init__(self) :
         self.queue = []
     
-    def enqueqe(self, val) :
+    def push(self, val) :
         self.queue.append(val)
         
         print(f"{val} added to queue")
     
-    def dequeqe(self) :
+    def popleft(self) :
             val = self.queue.pop(0)
         
             print(f'{val} deleted from queue')
-        
+    
+    def pop(self) :
+        pass 
+    
+    def pushleft(self) :
+        pass 
+    
+    
     def peak(self) :
         print(f'{self.queue[0]} is peak value')
     
