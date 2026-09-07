@@ -30,3 +30,39 @@ class Deque :
         
         
     
+    
+q = Deque()
+
+q.push(10) 
+q.push(20) 
+q.push(30) 
+
+q.display()
+q.peak()
+
+print()
+
+q.pushleft(40) 
+q.pushleft(50) 
+q.pushleft(60) 
+
+q.display()
+q.peak()
+
+print()
+
+q.pop()
+q.peak()
+q.display()
+
+print()
+
+q.popleft()
+q.display()
+
+q.peak()
+
+q.display()
+q.popleft()
+
+q.peak()
