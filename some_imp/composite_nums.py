@@ -1,4 +1,4 @@
-def prime_nums(limit : int) :
+def composite_nums(limit : int) :
     nums = [True] * (limit+1)
     
     nums[0] = nums[1] = False 
@@ -8,7 +8,7 @@ def prime_nums(limit : int) :
             for i in range(n*n , limit+1, n) :
                 nums[i] = False 
                 
-    return [i for i, val in enumerate(nums) if  val] 
+    return [i for i, val in enumerate(nums) if  not val] 
 
 
-print(prime_nums(100))
+print(composite_nums(100))
