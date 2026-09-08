@@ -8,7 +8,7 @@ def composite_nums(limit : int) :
             for i in range(n*n , limit+1, n) :
                 nums[i] = False 
                 
-    return [i for i, val in enumerate(nums) if  not val] 
+    return [i for i, val in enumerate(nums[2:], 2) if  not val] 
 
 
 print(composite_nums(100))
