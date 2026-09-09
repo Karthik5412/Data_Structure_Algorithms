@@ -12,8 +12,3 @@ def composite_nums(limit : int) :
 
 
 print(composite_nums(100)) 
-
-
-
-
-
