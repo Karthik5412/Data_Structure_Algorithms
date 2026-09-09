@@ -11,4 +11,9 @@ def composite_nums(limit : int) :
     return [i for i, val in enumerate(nums[2:], 2) if  not val] 
 
 
-print(composite_nums(100))
+print(composite_nums(100)) 
+
+
+
+
+
