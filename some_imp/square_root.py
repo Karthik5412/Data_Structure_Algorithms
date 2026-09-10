@@ -15,6 +15,6 @@ def square_root(num) :
         else :
             high = mid -1
             
-        return ans
+    return ans
 
 print(square_root(144))
