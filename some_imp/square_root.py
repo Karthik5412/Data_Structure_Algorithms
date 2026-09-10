@@ -1,4 +1,7 @@
 def square_root(num) :
+    if num <= 0 :
+        return "Can't calculate negative number or zero"
+    
     low = 1
     high = num // 2 
     ans = 0
@@ -18,3 +21,5 @@ def square_root(num) :
     return ans
 
 print(square_root(144))
+print(square_root(0))
+print(square_root(36))
