@@ -8,3 +8,5 @@ def get_series(num : int) -> list :
         
     return res 
         
+        
+print(get_series(10))
