@@ -13,3 +13,5 @@ print(get_series(10))
 
 
 print(get_series(100))
+
+print(get_series(120))
