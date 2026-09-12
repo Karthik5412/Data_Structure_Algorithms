@@ -10,3 +10,5 @@ def get_series(num : int) -> list :
         
         
 print(get_series(10))
+
+
