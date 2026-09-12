@@ -12,3 +12,4 @@ def get_series(num : int) -> list :
 print(get_series(10))
 
 
+print(get_series(100))
