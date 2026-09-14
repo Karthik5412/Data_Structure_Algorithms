@@ -10,4 +10,4 @@ def reverse_string(s,left=0,right=None) -> str:
     
     return ''.join(s)
     
-print(reverse_string(list('hello')))
+print(reverse_string(list('hl')))
