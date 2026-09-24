@@ -12,3 +12,6 @@ def linear_search(arr,target,idx=0) :
 n1 = [8,3,2,6,12,1] 
 
 print(linear_search(n1,8))
+
+
+
