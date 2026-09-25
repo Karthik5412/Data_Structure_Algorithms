@@ -27,7 +27,7 @@ n1 = [8,3,2,6,12,1]
 
 print(linear_search(n1,12))
 
-res = search(n1,8)
+res = search(n1,12)
 
 print(res)
 
