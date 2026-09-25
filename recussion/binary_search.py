@@ -14,11 +14,13 @@ def binary_search(arr,target) :
         else :
             return search(mid+1,right)
         
-    return search(0,len(arr)-1)
+    op =  search(0,len(arr)-1)
+    
+    return op 
 
 nums = [1,2,3,4,5,6,7]
 
-op = binary_search(nums,4)
+op = binary_search(nums,7)
 
 print(op)
     
