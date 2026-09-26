@@ -10,5 +10,5 @@ def n_pro(n) :
         
     return n * n_sum(n-1) 
 
-print(n_sum(12))
-print(n_pro(12))
+print(n_sum(5))
+print(n_pro(5))
