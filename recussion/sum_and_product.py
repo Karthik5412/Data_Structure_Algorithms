@@ -5,7 +5,10 @@ def n_sum(n) :
     return n + n_sum(n-1)
 
 def n_pro(n) :
-    pass 
+    if n == 1 :
+        return 1
+        
+    return n * n_sum(n-1) 
 
 print(n_sum(12))
 print(n_pro(12))
