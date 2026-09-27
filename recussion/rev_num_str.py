@@ -37,8 +37,8 @@ def pal(s,l=0, r= None) :
     
     
 
-# print(rev_num(12345))
+print(rev_num(12345))
 
-# print(rev_str(list('abc')))
+print(rev_str(list('abc')))
 
-# print(pal('cabac'))
+print(pal('cabac'))
