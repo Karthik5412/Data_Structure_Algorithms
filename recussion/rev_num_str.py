@@ -22,18 +22,18 @@ def rev_str(s,left = 0 , right = None) :
         
     return ''.join(s)
 
-# def pal(s,l=0, r= None) :
-#     if r == None :
-#         r = len(s)-1
+def pal(s,l=0, r= None) :
+    if r == None :
+        r = len(s)-1
     
-#     if l < r :
+    if l < r :
         
-#         if s[l] != s[r] :
-#             return False 
-#         else :
-#             return pal(s,l+1,r-1)
+        if s[l] != s[r] :
+            return False 
+        else :
+            return pal(s,l+1,r-1)
         
-#     return True
+    return True
     
     
 
