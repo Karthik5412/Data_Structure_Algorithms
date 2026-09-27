@@ -8,4 +8,4 @@ def count_zeros(n,count = 0) :
     return count_zeros(n // 10 , count)
 
 
-# print(count_zeros(120320520))
+print(count_zeros(120320520))
