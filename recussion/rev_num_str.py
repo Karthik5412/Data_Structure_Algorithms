@@ -9,18 +9,18 @@ def rev_num(num,pow= None)  :
     
     return (num % 10)* 10**pow + rev_num(num // 10) 
 
-# def rev_str(s,left = 0 , right = None) :
-#     if right == None :
-#         right = len(s) - 1
+def rev_str(s,left = 0 , right = None) :
+    if right == None :
+        right = len(s) - 1
         
         
-#     if left < right :
+    if left < right :
         
-#         s[left],s[right] = s[right],s[left]
+        s[left],s[right] = s[right],s[left]
         
-#         rev_str(s,left+1,right-1)
+        rev_str(s,left+1,right-1)
         
-#     return ''.join(s)
+    return ''.join(s)
 
 # def pal(s,l=0, r= None) :
 #     if r == None :
