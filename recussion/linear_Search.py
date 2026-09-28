@@ -24,7 +24,8 @@ def search(arr,target) :
     return ls(0)
 
 
-
+def multiple_vals(arr,target,op=[]) :
+    pass 
 
 
 n1 = [8,3,2,6,12,1] 
