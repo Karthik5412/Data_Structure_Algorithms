@@ -24,8 +24,16 @@ def search(arr,target) :
     return ls(0)
 
 
-def multiple_vals(arr,target,op=[]) :
-    pass 
+def multiple_vals(arr,target,idx=0,op=[]) :
+    
+    if idx < len(arr) :
+        if arr[idx] == target :
+            op.append(idx) 
+        
+            
+        return multiple_vals(arr,target,idx+1,op)
+    
+    return op if op else -1
 
 
 n1 = [8,3,2,6,12,1] 
@@ -36,5 +44,9 @@ res = search(n1,12)
 
 print(res)
 
+
+arr = [1,2,3,4,4,4,12,5]
+
+print(multiple_vals(arr,7))
 
 
