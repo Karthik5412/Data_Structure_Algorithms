@@ -23,6 +23,10 @@ def search(arr,target) :
     
     return ls(0)
 
+
+
+
+
 n1 = [8,3,2,6,12,1] 
 
 print(linear_search(n1,12))
