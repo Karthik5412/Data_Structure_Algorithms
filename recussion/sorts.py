@@ -34,7 +34,21 @@ def merge(left,right) :
     
 
 def quick_sort(arr) :
-    pass 
+    if len(arr) < 2 :
+        return arr 
+    
+    pivot = arr[-1] 
+    
+    left = []
+    right = []
+    
+    for i in arr[:-1] :
+        if i <= pivot :
+            left.append(i)
+        else :
+            right.append(i)
+            
+    return merge_sort(left) + [pivot] + merge_sort(right)
 
 
 arr1 = [4,2,3,5,1]
