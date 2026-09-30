@@ -1,4 +1,4 @@
 def subsets():
-    pass 
+    return 'issue' 
 
-subsets()
+print(subsets())
