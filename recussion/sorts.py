@@ -55,4 +55,6 @@ arr1 = [4,2,3,5,1]
 
 print(merge_sort(arr1))
 
+
+
 print(quick_sort(arr1))
