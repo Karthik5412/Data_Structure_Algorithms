@@ -12,3 +12,5 @@ def eleminate_ele(s:str,ele:chr,idx=0) :
     
     
 print(eleminate_ele('baccad','a'))
+print(eleminate_ele('baccad','b'))
+print(eleminate_ele('baccad','k'))
