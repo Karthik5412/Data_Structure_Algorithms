@@ -8,7 +8,7 @@ def func():
 
 
 
-
+print(subsets())
 print(subsets())
 print(subsets())
 
