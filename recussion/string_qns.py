@@ -58,3 +58,4 @@ print(eleminate_ele('baccad','k'))
 print(eleminate_word('baccapplegraped','grape'))
 
 print(eleminate_word_portion('apple_mango1_grape','mango'))
+
