@@ -5,6 +5,10 @@ def subsets():
 def func():
     pass
 
+
+
+
+
 print(subsets())
 print(subsets())
 
