@@ -36,7 +36,7 @@ def sub_set_mul(arr) :
             op.append(res)
             
         idx = 1 
-        while n[idx] == n[idx-1] :
+        while idx < len(n) and n[idx] == n[idx-1] :
             idx += 1
             
         sub_set_mul(n[idx:], res+[n[0]]) 
@@ -49,3 +49,5 @@ def sub_set_mul(arr) :
 
 print(subsets('','abc'))
 print(sub_sets(['a','b','c']))
+
+print(sub_set_mul([1,2,2]))
