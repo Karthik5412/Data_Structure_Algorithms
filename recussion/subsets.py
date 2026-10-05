@@ -28,7 +28,15 @@ def sub_sets(arr) :
     return res 
         
         
-
+def sub_set_mul(arr) :
+    op = []
+    
+    def healper(n,res) :
+        pass
+    
+    healper(arr,[])
+    
+    return op
 
 
 print(subsets('','abc'))
