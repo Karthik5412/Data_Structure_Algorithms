@@ -32,7 +32,15 @@ def sub_set_mul(arr) :
     op = []
     
     def healper(n,res) :
-        pass
+        if n == [] :
+            op.append(res)
+            
+        idx = 1 
+        while n[idx] == n[idx-1] :
+            idx += 1
+            
+        sub_set_mul(n[idx:], res+[n[0]]) 
+        sub_set_mul(n[idx:],res)
     
     healper(arr,[])
     
