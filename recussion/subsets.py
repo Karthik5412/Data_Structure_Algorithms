@@ -47,11 +47,22 @@ def sub_set_mul(arr) :
     return op
 
 def sub_itr(arr):
-    pass
+    op = [[]]
+    
+    for i in arr :
+        n = len(op) 
+        
+        for j in range(n) :
+            
+            
+            op.append(op[j] + [i])
+            
+    return op 
+            
 
 print(subsets('','abc'))
 print(sub_sets(['a','b','c']))
 
-print(sub_set_mul([1,2,2]))
+print(sub_itr([1,2,3]))
 
 
