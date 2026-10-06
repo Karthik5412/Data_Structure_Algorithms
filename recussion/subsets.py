@@ -46,6 +46,8 @@ def sub_set_mul(arr) :
     
     return op
 
+def sub_itr(arr):
+    pass
 
 print(subsets('','abc'))
 print(sub_sets(['a','b','c']))
