@@ -54,7 +54,6 @@ def sub_itr(arr):
         
         for j in range(n) :
             
-            
             op.append(op[j] + [i])
             
     return op 
