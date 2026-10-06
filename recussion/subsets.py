@@ -59,9 +59,25 @@ def sub_itr(arr):
     return op 
             
 
+def multiple_sub(arr) :
+    
+    op = [[]]
+    
+    for i,v in enumerate(arr) :
+        
+        
+        n = len(op)
+        
+        for j in range(n) :
+            
+            op.append(op[j] + [v]) 
+            
+    return op 
+
 print(subsets('','abc'))
 print(sub_sets(['a','b','c']))
 
 print(sub_itr([1,2,3]))
 
+print(multiple_sub([1,2,2]))
 
