@@ -62,13 +62,16 @@ def sub_itr(arr):
 def multiple_sub(arr) :
     
     op = [[]]
+    start = 0
     
     for i,v in enumerate(arr) :
         
         
-        n = len(op)
-        
-        for j in range(n) :
+        if i > 0 and arr[i] == arr[i-1] :
+            start = end
+            
+        end = len(op)
+        for j in range(start,end) :
             
             op.append(op[j] + [v]) 
             
