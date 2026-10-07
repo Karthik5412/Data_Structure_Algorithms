@@ -28,21 +28,7 @@ def sub_sets(arr) :
     return res 
         
         
-# def sub_set_mul(arr) :
-#     op = []
-    
-#     def healper(n,res) :
-#         op.append(res[:])
-        
-#         for i in range(len(n)) :
-#             if i > 0 and n[i] == n[i-1] :
-#                 continue 
-            
-#             healper()
-    
-#     healper(arr,[])
-    
-#     return op
+
 
 def sub_itr(arr):
     op = [[]]
