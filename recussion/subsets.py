@@ -32,15 +32,13 @@ def sub_set_mul(arr) :
     op = []
     
     def healper(n,res) :
-        if n == [] :
-            op.append(res)
+        op.append(res[:])
+        
+        for i in range(len(n)) :
+            if i > 0 and n[i] == n[i-1] :
+                continue 
             
-        idx = 1 
-        while idx < len(n) and n[idx] == n[idx-1] :
-            idx += 1
-            
-        sub_set_mul(n[idx:], res+[n[0]]) 
-        sub_set_mul(n[idx:],res)
+            healper()
     
     healper(arr,[])
     
@@ -83,4 +81,6 @@ print(sub_sets(['a','b','c']))
 print(sub_itr([1,2,3]))
 
 print(multiple_sub([1,2,2]))
+print(sub_set_mul([1,2,2]))
+
 
