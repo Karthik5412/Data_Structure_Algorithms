@@ -1,4 +1,5 @@
-def permutatuins(arr : list) -> list :
+def permutatoins(arr : list) -> list :
     pass
 
 
+permutatoins([1,2,2])
