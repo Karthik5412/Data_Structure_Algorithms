@@ -1,1 +1,2 @@
-print('permutations')
+def permutatuins(arr : list) -> list :
+    pass
