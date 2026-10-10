@@ -13,6 +13,8 @@ def permutatoins(arr : list) -> list :
             backtrack(arr,idx+1)
             
             arr[idx] , arr[j] = arr[j], arr[idx]
+        
+        
     backtrack(arr,0)
     
     return res 
