@@ -14,7 +14,6 @@ def permutatoins(arr : list) -> list :
             
             arr[idx] , arr[j] = arr[j], arr[idx]
         
-        
     backtrack(arr,0)
     
     return res 
