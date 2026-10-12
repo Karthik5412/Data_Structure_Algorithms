@@ -61,12 +61,14 @@ def multiple_sub(arr) :
             
     return op 
 
+
+
 print(subsets('','abc'))
 print(sub_sets(['a','b','c']))
 
 print(sub_itr([1,2,3]))
 
 print(multiple_sub([1,2,2]))
-print(sub_set_mul([1,2,2]))
+
 
 
