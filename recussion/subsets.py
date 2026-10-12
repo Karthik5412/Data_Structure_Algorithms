@@ -69,6 +69,7 @@ print(sub_sets(['a','b','c']))
 print(sub_itr([1,2,3]))
 
 print(multiple_sub([1,2,2]))
+print(sub_itr(['a','b','c']))
 
 
 
